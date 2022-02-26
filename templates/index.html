@@ -1,0 +1,95 @@
+<!-- PRINCIPAL PAGE  -->
+{% extends 'layout.html' %}
+
+
+{% block body %}
+
+<h2 class="text-white" id="welcome-text">
+  Welcome this is a server
+  for practice a little of hacking.
+</h2>
+
+<hr class="text-white">
+
+
+<!-- INFO VIEW -->
+<div class="p-2 my-4" id="info">
+  <p class="text-white text-center">
+    This is a server for practice
+    hacking with some scripts.
+    They are download and execute
+    in a computer victim. 
+  </p>
+</div>
+
+
+<h3 class="text-white">
+  Scripts.
+</h3>
+
+
+<!-- SCRIPTS VIEW -->
+<section class="my-3" id="scripts-view">
+  {% if scripts_list %}
+  {% for script in scripts_list %}
+  {% if script != {} %}
+
+  <!-- SCRIPT -->
+  <article class="card p-2 script">
+    <div class="card-header">
+      <h4>
+        {{ script['name'] }}
+      </h4>
+      <h5 class="lead text-white">
+        {{ script['languajes']  }}
+      </h5>
+    </div>
+
+    <div class="card-body">
+      <p>
+      {{ script['description']  }}
+      </p>
+
+      {% if script['dependencies'] %}
+      <h6 class="lead mb-3" id="dependencie-message">
+        Dependencies
+      </h6>
+      {% for dependencie in script['dependencies'] %}
+      <p class="lead">
+        <strong>
+          {{ dependencie['general'] }}
+        </strong>
+        <strong>
+          {{ dependencie['package'] }}
+        </strong>
+        <small class="text-primary">
+          {{ dependencie['version']  }}
+        </small>
+      </p>
+      {% endfor %}
+
+      {% else %}
+      <p class="lead">
+        <strong>
+          This script not required
+          dependencies.
+        </strong>
+      </p>
+      {% endif %}
+    </div>
+
+    <div class="card-footer">
+      <!-- LINK TO DOWNLOAD SCRIPT -->
+      <a class="btn btn-dark w-100" 
+         href="{{ url_for('myroutes.get_script_route', id = script['id']) }}"
+         download="{{ script['nameWithExtension']  }}">
+        Get
+      </a>
+    </div>
+  </article>
+  {% endif %}
+  {% endfor %}
+  {% endif %}
+</section>
+
+{% endblock %}

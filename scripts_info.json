@@ -1,0 +1,54 @@
+{
+  "SCRIPTS": [
+    {
+      "id": 1,
+      "name": "Shutdown Computer.",
+      "nameWithExtension": "shutdown-computer.py",
+      "languajes": "Python2 and Python3",
+      "description": "A script made with python, for shutdown a computer. It's executable with python2 and python3.",
+      "dependencies": [
+        {
+          "general": "Only have Python2 or Python3 installed."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Get Ip of the Victim.",
+      "nameWithExtension": "get-ip.py",
+      "languajes": "Python3",
+      "description": "A program-script made with python3, for get the ip of victim and show in a terminal.",
+      "dependencies": [
+        {
+          "package": "requests",
+          "version": "2.27.1"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Block computer with emergents windows.",
+      "nameWithExtension": "emergents-windows.js",
+      "languajes": "Javascript",
+      "description": "This is a script for block the computer with emergents windows. Execute with node (whatever version).",
+      "dependencies": [
+        {
+          "general": "Only have node installed."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Python HTTP port blocker.",
+      "nameWithExtension": "http-blocker.py",
+      "languajes": "Python3",
+      "description": "This is a script with python3 for blocker the http port 80 and 443 http.",
+      "dependencies": [
+        {
+          "package": "requests",
+          "version": "2.27.1"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+/*
+ * Styles custom for the pages
+ * */
+
+
+/* General */
+body {
+  background-color: #41424f;
+}
+
+
+/* Container */
+#main-container {
+  margin: 3rem auto 7rem;
+}
+
+/* Navigation */
+.navbar {
+  background-color: #668866;
+}
+
+
+/* scripts view */
+#scripts-view {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 3rem;
+  row-gap: 2.5rem;
+}
+
+.script {
+  background-color: #669966;
+}
+
+/* message for the dependencies */
+#dependencie-message {
+  color: #ccc;
+}

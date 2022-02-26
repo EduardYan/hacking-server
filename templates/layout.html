@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Hacking Server | Dan</title>
+    <!-- BOOTSTRAP STYLES -->
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/bootstrap.min.css') }}">
+    <!-- CUSTOM STYLES -->
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/custom.css') }}">
+  </head>
+  <body>
+
+    {% include 'partials/_nav.html' %}
+
+    <!-- ALL CONTAINER -->
+    <div class="container" id="main-container">
+      {% block body %}
+      {% endblock %}
+    </div>
+
+
+    {% include 'partials/_footer.html' %}
+
+    <!-- SCRIPTS -->
+    <script src="{{ url_for('static', filename = 'js/bootstrap.bundle.min.js') }}">
+    </script>
+
+  </body>
+</html>
